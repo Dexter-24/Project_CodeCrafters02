@@ -1,4 +1,7 @@
-/* Reset styles */
+body {
+  font-family: 'Inter Tight', sans-serif;
+  color: #fafafa;
+}
 h1,
 h2,
 h3,
@@ -7,10 +10,6 @@ h5,
 h6,
 p {
   margin: 0;
-}
-
-p:last-child {
-  margin-bottom: 0;
 }
 
 ul {
@@ -26,10 +25,48 @@ a {
 
 button {
   cursor: pointer;
+  display: block;
 }
 
 img {
   display: block;
   max-width: 100%;
   height: auto;
+}
+
+.container {
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+@media screen and (min-width: 375px) {
+  .container {
+    width: 375px;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .container {
+    width: 1280px;
+  }
 }
