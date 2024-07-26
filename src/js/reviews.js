@@ -1,12 +1,14 @@
 import Swiper from 'swiper';
+import { Navigation } from 'swiper/modules';
 import 'swiper/css';
 
 document.addEventListener('DOMContentLoaded', function () {
-  const swiperContainer = document.querySelector('.swiper-container');
+  const swiperContainer = document.querySelector('.reviews-swiper-container');
   const swiperPrev = document.querySelector('.swiper-button-prev');
   const swiperNext = document.querySelector('.swiper-button-next');
 
   const swiper = new Swiper(swiperContainer, {
+    modules: [Navigation],
     slidesPerView: 4,
     spaceBetween: 20,
     navigation: {
@@ -19,10 +21,10 @@ document.addEventListener('DOMContentLoaded', function () {
         slidesPerView: 1,
       },
       340: {
-        slidesPerView: 2,
+        slidesPerView: 1,
       },
       768: {
-        slidesPerView: 3,
+        slidesPerView: 2,
       },
       1024: {
         slidesPerView: 4,

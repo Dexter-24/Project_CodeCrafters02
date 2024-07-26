@@ -2,35 +2,39 @@
   background: #1c1d20;
   padding: 32px 20px;
   position: relative;
+  width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
 }
 
 .reviews-title {
   margin-bottom: 32px;
   color: #fafafa;
-  font-family: 'Inter Tight', sans-serif;
   font-weight: 700;
   font-size: 28px;
   line-height: 1.2;
 }
 
-.swiper-container {
+.reviews-swiper-container {
   width: 100%;
   height: auto;
-  padding-bottom: 32px;
+  position: relative;
 }
 
 .swiper-wrapper {
   display: flex;
-  list-style: none;
+  flex-wrap: nowrap; /* Убирает перенос элементов */
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
 }
 
 .swiper-slide {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0 10px;
+  padding: 0 8px; /* Отступ между карточками */
+  box-sizing: border-box;
 }
 
 .review-card {
@@ -38,8 +42,8 @@
   border: 1px solid rgba(250, 250, 250, 0.2);
   border-radius: 20px;
   padding: 16px;
-  width: 332px;
-  height: 302px;
+  width: 332px; /* Фиксированная ширина */
+  height: 302px; /* Фиксированная высота */
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
@@ -80,25 +84,28 @@
 .swiper-button-prev,
 .swiper-button-next {
   position: absolute;
-  /* bottom: 32px; Отступ снизу от контейнера */
   width: 68px;
   height: 68px;
   border: 1px solid rgba(250, 250, 250, 0.2);
-  border-radius: 60px;
+  border-radius: 50%;
   padding: 18px;
   background-color: #1c1d20;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 10;
+  bottom: 0; /* Находимся непосредственно под swiper-container */
 }
 
 .swiper-button-prev {
-  left: calc(50% - 80px);
+  left: calc(
+    50% - 84px
+  ); /* Центрирование с учетом ширины кнопки и расстояния между кнопками */
 }
 
 .swiper-button-next {
-  left: calc(50% + 12px);
+  left: calc(50% + 16px); /* Центрирование с учетом расстояния между кнопками */
 }
 
 .swiper-button-disabled {
@@ -108,14 +115,65 @@
 
 .swiper-button-prev::before,
 .swiper-button-next::before {
-  font-size: 24px; /* Размер иконок стрелок */
-  color: #fafafa; /* Цвет иконок стрелок */
+  font-size: 24px;
+  color: #fafafa;
 }
 
 .swiper-button-prev::before {
   content: '◀'; /* Символ стрелки для кнопки "предыдущий" */
+  /* background-image: url('/src/img/icons.svg'); */
 }
 
 .swiper-button-next::before {
-  content: '▶'; /* Символ стрелки для кнопки "следующий" */
+  content: '▶';
+}
+
+/* Позиционирование кнопок с отступом 32px от нижнего края */
+.reviews-swiper-container {
+  padding-bottom: 100px; /* Обеспечивает место для кнопок */
+  position: relative;
+}
+
+.reviews-swiper-container::after {
+  display: block;
+  height: 100px; /* Высота, чтобы отступ от нижнего края контейнера был виден */
+  position: relative;
+}
+
+/* Медиа-запросы для адаптивности */
+
+/* Мобильные устройства (320px и более) */
+@media (min-width: 320px) {
+  .swiper-slide {
+    padding: 0 8px; /* Отступ между карточками */
+  }
+
+  .review-card {
+    width: 100%; /* Полная ширина карточки на мобильных устройствах */
+    max-width: none; /* Убираем максимальную ширину */
+  }
+}
+
+/* Таблеты (768px и более) */
+@media (min-width: 768px) {
+  .swiper-slide {
+    padding: 0 12px; /* Увеличенный отступ между карточками */
+  }
+
+  .review-card {
+    width: 100%; /* Полная ширина карточки на планшетах */
+    max-width: 332px; /* Максимальная ширина карточки */
+  }
+}
+
+/* Десктопы (1440px и более) */
+@media (min-width: 1440px) {
+  .swiper-slide {
+    padding: 0 16px; /* Расстояние между карточками */
+  }
+
+  .review-card {
+    width: 332px; /* Фиксированная ширина карточки */
+    height: 302px; /* Фиксированная высота карточки */
+  }
 }
