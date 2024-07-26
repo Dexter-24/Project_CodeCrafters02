@@ -1,0 +1,121 @@
+.reviews {
+  background: #1c1d20;
+  padding: 32px 20px;
+  position: relative;
+}
+
+.reviews-title {
+  margin-bottom: 32px;
+  color: #fafafa;
+  font-family: 'Inter Tight', sans-serif;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 1.2;
+}
+
+.swiper-container {
+  width: 100%;
+  height: auto;
+  padding-bottom: 32px;
+}
+
+.swiper-wrapper {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 10px;
+}
+
+.review-card {
+  background: #1c1d20;
+  border: 1px solid rgba(250, 250, 250, 0.2);
+  border-radius: 20px;
+  padding: 16px;
+  width: 332px;
+  height: 302px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  color: #ffffff;
+  overflow: hidden;
+}
+
+.review-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 10px;
+  object-fit: cover;
+  background: #e0e0e0;
+  margin-bottom: 16px;
+}
+
+.review-author {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 150%;
+  letter-spacing: -0.02em;
+  color: #fafafa;
+  margin: 0;
+  margin-bottom: 8px;
+}
+
+.review-text {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  color: rgba(250, 250, 250, 0.6);
+  margin: 0;
+  flex-grow: 1;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  position: absolute;
+  /* bottom: 32px; Отступ снизу от контейнера */
+  width: 68px;
+  height: 68px;
+  border: 1px solid rgba(250, 250, 250, 0.2);
+  border-radius: 60px;
+  padding: 18px;
+  background-color: #1c1d20;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.swiper-button-prev {
+  left: calc(50% - 80px);
+}
+
+.swiper-button-next {
+  left: calc(50% + 12px);
+}
+
+.swiper-button-disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.swiper-button-prev::before,
+.swiper-button-next::before {
+  font-size: 24px; /* Размер иконок стрелок */
+  color: #fafafa; /* Цвет иконок стрелок */
+}
+
+.swiper-button-prev::before {
+  content: '◀'; /* Символ стрелки для кнопки "предыдущий" */
+}
+
+.swiper-button-next::before {
+  content: '▶'; /* Символ стрелки для кнопки "следующий" */
+}
