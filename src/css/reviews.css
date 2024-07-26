@@ -15,7 +15,7 @@
   line-height: 1.2;
 }
 
-.swiper-container {
+.reviews-swiper-container {
   width: 100%;
   height: auto;
   position: relative;
@@ -120,7 +120,8 @@
 }
 
 .swiper-button-prev::before {
-  content: '◀';
+  content: '◀'; /* Символ стрелки для кнопки "предыдущий" */
+  /* background-image: url('/src/img/icons.svg'); */
 }
 
 .swiper-button-next::before {
@@ -128,12 +129,12 @@
 }
 
 /* Позиционирование кнопок с отступом 32px от нижнего края */
-.swiper-container {
+.reviews-swiper-container {
   padding-bottom: 100px; /* Обеспечивает место для кнопок */
   position: relative;
 }
 
-.swiper-container::after {
+.reviews-swiper-container::after {
   display: block;
   height: 100px; /* Высота, чтобы отступ от нижнего края контейнера был виден */
   position: relative;

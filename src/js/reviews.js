@@ -3,7 +3,7 @@ import { Navigation } from 'swiper/modules';
 import 'swiper/css';
 
 document.addEventListener('DOMContentLoaded', function () {
-  const swiperContainer = document.querySelector('.swiper-container');
+  const swiperContainer = document.querySelector('.reviews-swiper-container');
   const swiperPrev = document.querySelector('.swiper-button-prev');
   const swiperNext = document.querySelector('.swiper-button-next');
 
