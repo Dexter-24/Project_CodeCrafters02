@@ -26,7 +26,6 @@ accordionItems.forEach(item => {
 });
 
 const buttonNext = document.querySelector('.swiper-next');
-const buttonBack = document.querySelector('.swiper-back');
 const swiperEl = document.querySelector('.about-me-swiper-container');
 
 const swiperAbout = new Swiper('.about-me-skills', {
@@ -58,9 +57,6 @@ const swiperAbout = new Swiper('.about-me-skills', {
 
 buttonNext.addEventListener('click', () => {
   swiperAbout.slideNext();
-});
-buttonBack.addEventListener('click', () => {
-  swiperAbout.slidePrev();
 });
 
 swiperEl.addEventListener('keydown', function (event) {
