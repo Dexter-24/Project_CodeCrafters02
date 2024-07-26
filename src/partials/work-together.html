@@ -1,0 +1,82 @@
+<footer class="footer" id="footer">
+  <div class="container footer-container">
+    <div class="footer-banner">
+      <picture class="responsive-img">
+        <source
+          srcset="
+            ./img/footer-desktop-tab@2x.png 2x,
+            ./img/footer-desktop-tab.png    1x
+          "
+          media="(min-width: 1280px)"
+        />
+        <source
+          srcset="
+            ./img/footer-desktop-tab@2x.png 2x,
+            ./img/footer-desktop-tab.png    1x
+          "
+          media="(min-width: 768px)"
+        />
+        <source
+          srcset="./img/footer-mob@2x-min.png 2x, ./img/footer-mob-min.png 1x"
+          media="(min-width: 375px)"
+        />
+        <img
+          class="footer-img"
+          src="./img/footer-mob-min.png"
+          alt="photo Jefferson"
+          width="343"
+          height="500"
+        />
+      </picture>
+      <h2 class="footer-title">Let's <span class="title-accent">work</span></h2>
+      <h2 class="footer-title">together</h2>
+    </div>
+    <form class="footer-form">
+      <input
+        class="footer-form-input"
+        id="user-email"
+        type="email"
+        name="email"
+        placeholder="clients@gmail.com"
+        pattern="^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$"
+        autocomplete="off"
+      />
+      <input
+        class="footer-form-input"
+        id="user-comment"
+        type="text"
+        name="comments"
+        placeholder="comments"
+        autocomplete="off"
+      />
+      <button class="footer-form-btn" id="form-btn" type="submit">Send</button>
+    </form>
+    <address class="footer-bottom">
+      <ul class="contacts">
+        <li class="contacts-item contacts-mail">
+          <a class="contacts-link" href="mailto:lloydjefferson@gmail.com"
+            >lloydjefferson@gmail.com</a
+          >
+        </li>
+        <li class="contacts-item contacts-phone">
+          <a class="contacts-link" href="tel:+3801111111111"
+            >+380 11 1111 11 11</a
+          >
+        </li>
+      </ul>
+    </address>
+  </div>
+  <div class="backdrop">
+    <div class="modal">
+      <div class="modal-box">
+        <button class="close-btn" type="button">
+          <svg class="icon-close" width="22" height="22">
+            <use href="/img/modal-x.svg#icon-modal-x"></use>
+          </svg>
+        </button>
+        <h3 class="modal-title"></h3>
+        <p class="modal-message"></p>
+      </div>
+    </div>
+  </div>
+</footer>

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import Accordion from 'accordion-js';
 
 import Swiper from 'swiper';
@@ -7,3 +8,4 @@ import axios from 'axios';
 
 
 import './js/about-me.js';
+import '/js/reviews.js';
