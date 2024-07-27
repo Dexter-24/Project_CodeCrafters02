@@ -1,0 +1,59 @@
+.hero-container {
+    background-image: url(../img/heromobgradient@1x.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: left;
+}
+
+@media screen and (min-device-pixel-ratio: 2),
+(min-resolution: 192dpi),
+(min-resolution: 2dppx) {
+    .hero-container {
+        background-image: url(../img/heromobgradient@2x.png);
+    }
+}
+
+.hero-title {
+    font-family: "Inter Tight", sans-serif;
+    font-weight: 500;
+    font-size: 50px;
+    line-height: 1;
+    letter-spacing: -0.03em;
+    text-transform: uppercase;
+    color: #fafafa;
+    padding-top: 169px;
+    margin-bottom: 212px;
+}
+
+.soc-networks-list {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 4px;
+}
+
+.hero-list-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 10px;
+    border: 1px solid rgba(250, 250, 250, 0.2);
+    border-radius: 60px;
+    padding: 10px;
+    width: 37px;
+    height: 37px;
+}
+
+.hero-list-item-email {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 10px;
+    border: 1px solid rgba(250, 250, 250, 0.2);
+    border-radius: 60px;
+    padding: 10px 12px;
+    height: 37px;
+}
