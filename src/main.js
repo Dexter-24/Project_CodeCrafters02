@@ -9,3 +9,4 @@ import axios from 'axios';
 
 import './js/about-me.js';
 import '/js/reviews.js';
+import './js/projects.js';

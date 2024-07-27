@@ -1,4 +1,3 @@
-.projects-conteiner {}
 
 .title {
     font-weight: 600;
@@ -8,20 +7,16 @@
     text-transform: uppercase;
     color: rgba(250, 250, 250, 0.4);
     margin-bottom: 32px;
-
-}
-
-
-
-.wrap-projects {
-
-    border-radius: 24px;
 }
 
 .wrap-content {
     padding: 32px;
     background-color: #fafafa;
     border-radius: 24px 24px 0 0;
+}
+
+.projects-swiper-slide{
+    
 }
 
 .list-projects {
@@ -33,7 +28,6 @@
     gap: 6px;
     list-style-type: none;
     margin-bottom: 96px;
-
 }
 
 .list-item-projects {
@@ -66,9 +60,13 @@
     cursor: pointer;
     color: #fafafa;
     font-weight: 500;
-        font-size: 16px;
-        letter-spacing: -0.02em;
-        
+    font-size: 16px;
+    letter-spacing: -0.02em;
+}
+
+.projects-btn:hover,
+.projects-btn:focus {
+    background-color: #ee232d;
 }
 
 .wrap-image {
@@ -90,6 +88,7 @@
     justify-content: center;
     flex-direction: row;
     margin-top: 32px;
+    gap: 12px;
 }
 
 .arrow-right {
@@ -100,20 +99,20 @@
     height: 52px;
 }
 
-@media screen and (min-width: 375px) {}
+/* swiper */
+.projects-swiper-container {
+    overflow: hidden;
+}
+
+
+
 
 
 @media screen and (min-width: 768px) {
-    /* .projects-conteiner {
-        max-width: 768px;
-        padding: 0 16px;
-    } */
 
     .list-projects {
         margin-bottom: 164px;
     }
-
-    .title {}
 
     .projects-btn {
         padding: 18px 50px;
@@ -125,37 +124,40 @@
         padding-top: 64px;
         padding-left: 64px;
         padding-bottom: 64px;
-
+        
     }
 
     .projects-text {
         font-weight: 500;
         font-size: 44px;
-        line-height: 1;
+        line-height: 1; 
         letter-spacing: -0.03em;
-        /* margin-right: 146px; */
-    width: 494px;
+        width: 494px;
     }
 
-    .projects-btn {}
+    .arrow{
+        gap: 20px;
+    }
 
 }
 
 @media screen and (min-width: 1440px) {
-    /* .projects-conteiner {
-        max-width: 1440px;
-        padding: 0 16px;
-    } */
-
     .projects-text {
         max-width: 494px;
     }
 
-    .wrap-projects {
+    /* .wrap-projects {
         border-radius: 24px;
         display: flex;
         flex-direction: row;
-    }
+    } */
+
+    
+    .wrap-projects{
+padding: 32px;
+background-color: #fafafa;
+border-radius: 24px 0 0 24px ;
+}
 
     .wrap-content {
         border-radius: 24px 0 0 24px;
@@ -179,4 +181,16 @@
         width: 177px;
         height: 55px;
     }
+}
+
+
+/* swiper */
+
+.projects-swiper-arrow-svg{
+    
+}
+
+
+.projects-swiper-wrapper {
+    overflow: hidden;
 }
