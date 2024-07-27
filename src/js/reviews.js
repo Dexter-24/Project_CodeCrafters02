@@ -2,18 +2,25 @@ import Swiper from 'swiper';
 import { Navigation } from 'swiper/modules';
 import 'swiper/css';
 
+// Инициализация Swiper для секции Reviews
 document.addEventListener('DOMContentLoaded', function () {
-  const swiperContainer = document.querySelector('.reviews-swiper-container');
-  const swiperPrev = document.querySelector('.swiper-button-prev');
-  const swiperNext = document.querySelector('.swiper-button-next');
+  const reviewsSwiperContainer = document.querySelector(
+    '.reviews-swiper-container'
+  );
+  const reviewsSwiperPrev = document.querySelector(
+    '.reviews-swiper-button-prev'
+  );
+  const reviewsSwiperNext = document.querySelector(
+    '.reviews-swiper-button-next'
+  );
 
-  const swiper = new Swiper(swiperContainer, {
+  const reviewsSwiper = new Swiper(reviewsSwiperContainer, {
     modules: [Navigation],
     slidesPerView: 4,
-    spaceBetween: 20,
+    spaceBetween: 16,
     navigation: {
-      nextEl: swiperNext,
-      prevEl: swiperPrev,
+      nextEl: reviewsSwiperNext,
+      prevEl: reviewsSwiperPrev,
     },
     keyboard: true,
     breakpoints: {
@@ -68,15 +75,16 @@ document.addEventListener('DOMContentLoaded', function () {
       `
       )
       .join('');
-    swiperContainer.querySelector('.swiper-wrapper').innerHTML = reviewsList;
-    swiper.update();
+    reviewsSwiperContainer.querySelector('.reviews-swiper-wrapper').innerHTML =
+      reviewsList;
+    reviewsSwiper.update();
     checkNavigationButtons();
   }
 
   function showNoReviewsMessage() {
-    swiperContainer.querySelector('.swiper-wrapper').innerHTML =
+    reviewsSwiperContainer.querySelector('.reviews-swiper-wrapper').innerHTML =
       '<p class="not-found">No content available</p>';
-    swiper.destroy();
+    reviewsSwiper.destroy();
   }
 
   function showErrorPopup(message) {
@@ -84,20 +92,18 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   function checkNavigationButtons() {
-    if (swiper.isBeginning) {
-      // Обновлено
-      swiperPrev.classList.add('swiper-button-disabled');
+    if (reviewsSwiper.isBeginning) {
+      reviewsSwiperPrev.classList.add('swiper-button-disabled');
     } else {
-      swiperPrev.classList.remove('swiper-button-disabled');
+      reviewsSwiperPrev.classList.remove('swiper-button-disabled');
     }
 
-    if (swiper.isEnd) {
-      // Обновлено
-      swiperNext.classList.add('swiper-button-disabled');
+    if (reviewsSwiper.isEnd) {
+      reviewsSwiperNext.classList.add('swiper-button-disabled');
     } else {
-      swiperNext.classList.remove('swiper-button-disabled');
+      reviewsSwiperNext.classList.remove('swiper-button-disabled');
     }
   }
 
-  swiper.on('slideChange', checkNavigationButtons);
+  reviewsSwiper.on('slideChange', checkNavigationButtons);
 });
