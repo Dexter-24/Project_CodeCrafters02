@@ -1,11 +1,9 @@
-#hero {
-    padding-bottom: 0;
+.hero-section {
+    padding-bottom: 32px;
 }
 
-.hero-section {
-    height: 812px;
-    text-align: center;
-    background-image: linear-gradient(90deg, #1c1d20 49.68%, #69292d 67.73%, #ed3b44 100%), url(../img/heromob@1x.png);
+.hero-container {
+    background-image: url(../img/heromob@1x.png);
     background-repeat: no-repeat;
     background-size: contain;
     background-position: left;
@@ -15,62 +13,39 @@
 (min-resolution: 192dpi),
 (min-resolution: 2dppx) {
     .hero-section {
-        background-image: url(../img/heromob@2x.png);
+        background-image: url();
     }
 }
 
-#hero .hero-container {
-    padding-top: 281px;
-    padding-bottom: 32px;
-    display: flex;
-    flex-direction: column;
-}
-
 .hero-title {
+    font-family: "Inter Tight", sans-serif;
     font-weight: 500;
     font-size: 50px;
     line-height: 1;
     letter-spacing: -0.03em;
     text-transform: uppercase;
     color: #fafafa;
-    text-align: left;
-    padding: 0 16px 0 16px;
+    padding-top: 169px;
+    margin-bottom: 212px;
 }
 
 .soc-networks-list {
     display: flex;
     align-items: center;
-    flex-direction: row;
+    justify-content: flex-end;
     gap: 4px;
-    padding: 0 16px 0 16px;
+    padding-bottom: 32px;
 }
 
 .hero-list-item {
     border: 1px solid rgba(250, 250, 250, 0.2);
     border-radius: 60px;
-    width: 37px;
-    height: 37px;
-    align-items: center;
-    display: flex;
-    justify-content: center;
+    padding: 10px;
     font-weight: 500;
     font-size: 14px;
     letter-spacing: -0.02em;
+    font-family: "Inter Tight", sans-serif;
     transition: border-color 250ms linear, box-shadow 250ms linear;
-}
-
-.hero-list-item-email {
-    border: 1px solid rgba(250, 250, 250, 0.2);
-    border-radius: 60px;
-    padding: 10px 12px;
-    width: 178px;
-    height: 37px;
-    align-items: center;
-    display: flex;
-    justify-content: center;
-    font-weight: 500;
-    font-size: 14px;
-    letter-spacing: -0.02em;
 }
 
 .hero-list-item:hover,
@@ -79,3 +54,12 @@
     box-shadow: 0 0 15px #ed3b44;
 }
 
+@media screen and (min-width: 320px) and (max-width: 375px) {
+    .hero-list-item {
+            border-radius: 50px;
+            font-weight: 300;
+            font-size: 11px;
+            letter-spacing: -0.01em;
+            line-height: 12px;
+    }
+}
