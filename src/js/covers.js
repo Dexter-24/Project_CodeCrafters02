@@ -35,39 +35,46 @@ const images = [
 ];
 
 document.addEventListener('DOMContentLoaded', () => {
-    const listContainers = document.querySelectorAll('.content-list.js-list');
-
-    if (!listContainers.length) return;
-
+    const images = {
+        'js-list-one': [
+            { src: img6, src2x: img6x2, alt: 'Cover 6' }
+        ],
+        'js-list-two': [
+            { src: img1, src2x: img1x2, alt: 'Cover 1' },
+            { src: img2, src2x: img2x2, alt: 'Cover 2' }
+        ],
+        'js-list-three': [
+            { src: img5, src2x: img5x2, alt: 'Cover 5' },
+            { src: img10, src2x: img10x2, alt: 'Cover 10' },
+            { src: img3, src2x: img3x2, alt: 'Cover 3' }
+        ],
+        'js-list-four': [
+            { src: img4, src2x: img4x2, alt: 'Cover 4' },
+            { src: img7, src2x: img7x2, alt: 'Cover 7' },
+            { src: img8, src2x: img8x2, alt: 'Cover 8' }
+        ],
+        'js-list-five': [
+            { src: img9, src2x: img9x2, alt: 'Cover 9' }
+        ]
+    };
 
     const createListItems = (images) => {
         return images.map(image => `
             <li class="content-list-item">
-                <img src="${image.src}" srcset="${image.src2x} 2x" alt="${image.alt}" class="content-list-image"/>
+                <picture>
+                    <source srcset="${image.src2x} 2x, ${image.src}" media="(min-width: 375px)"/>
+                    <img class="content-list-image" src="${image.src}" alt="${image.alt}" width= "282" height= "162"/>
+                </picture>
             </li>
         `).join('');
     };
 
-    listContainers.forEach(container => {
-        container.innerHTML = createListItems(images);
+
+    Object.keys(images).forEach(lineClass => {
+        const list = document.querySelector(`.${lineClass}`);
+        if (list) {
+            list.innerHTML = createListItems(images[lineClass]);
+        }
     });
-
-
-    const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                listContainers.forEach(container => container.classList.remove('hidden'));
-            } else {
-                listContainers.forEach(container => container.classList.add('hidden'));
-            }
-        });
-    }, { threshold: 0.1 });
-
-
-    const marquee = document.querySelector('.marquee');
-    if (marquee) {
-        observer.observe(marquee);
-    }
 });
-
 
