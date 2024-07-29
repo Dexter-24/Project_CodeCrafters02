@@ -90,6 +90,11 @@
 }
 
 
+  to {
+    transform: translateX(-180%);
+  }
+}
+
 .js-list-three {
     margin-bottom: 25px;
     gap: 25px;
