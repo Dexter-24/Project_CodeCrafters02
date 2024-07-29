@@ -1,7 +1,9 @@
 
+
 import Swiper from 'swiper';
 import 'swiper/css';
 import { Navigation, Keyboard, Mousewheel } from 'swiper/modules';
+
 
 const swiperProjects = new Swiper('.projects-swiper-container' , {
     modules: [Keyboard, Mousewheel, Navigation],
@@ -21,11 +23,4 @@ pageUpDown: true,
     },
     slideToClickedSlide: true,
 });
-
-
-
-
-
-
-
 

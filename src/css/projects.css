@@ -15,6 +15,7 @@
     border-radius: 24px 24px 0 0;
 }
 
+
 .projects-swiper-slide {
     padding: 0;
 }
@@ -100,6 +101,7 @@
     height: 52px;
 }
 
+
 .projects-arrow-svg {
     width: 24px;
     height: 24px;
@@ -112,11 +114,13 @@
 }
 
 
+
 @media screen and (min-width: 768px) {
 
 .list-projects {
 margin-bottom: 164px;
     }
+
 
 .projects-btn {
     padding: 18px 50px;
@@ -159,9 +163,11 @@ margin-bottom: 164px;
     height: 32px;
 }
 
+
 }
 
 @media screen and (min-width: 1440px) {
+
 .projects-text {
     max-width: 494px;
 }
@@ -203,8 +209,6 @@ margin-bottom: 164px;
 
 
 }
-
-
 
 
 
