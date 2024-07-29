@@ -1,0 +1,142 @@
+.faq {
+  padding-top: 64px;
+}
+
+.faq-title {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+  color: rgba(250, 250, 250, 0.4);
+  padding-bottom: 32px;
+  border-bottom: 1px solid rgba(250, 250, 250, 0.2);
+}
+
+.faq-acordeon-wrap {
+  display: flex;
+  gap: 24px;
+  padding-top: 20px;
+  padding-bottom: 16px;
+}
+
+.faq-item {
+  width: 100%;
+  border-bottom: 1px solid rgba(250, 250, 250, 0.2);
+  padding-bottom: 20px;
+}
+
+.faq-subtitle {
+  width: 100%;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+  color: #fafafa;
+}
+
+.faq-text {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+  /* display: none; */
+  color: rgba(250, 250, 250, 0.6);
+}
+
+.faq-subtitle > br {
+  display: none;
+}
+
+.faq-current {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background-color: transparent;
+  border: 1px solid rgba(250, 250, 250, 0.2);
+}
+
+.faq-is-active {
+  transform: rotate(180deg);
+  transition: transform 250ms linear;
+}
+
+.faq-hidden {
+  overflow: hidden;
+  opacity: 0;
+  height: 0;
+}
+
+@media screen and (min-width: 768px) {
+  .faq {
+    padding-top: 96px;
+  }
+
+  .faq-acordeon-wrap {
+    width: 100%;
+    padding-top: 32px;
+    padding-bottom: 26px;
+    justify-content: space-between;
+  }
+
+  .faq-item {
+    padding-bottom: 24px;
+  }
+
+  .faq-current {
+    width: 40px;
+    height: 40px;
+  }
+
+  .faq-subtitle > br {
+    display: inline;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .faq {
+    padding-top: 164px;
+  }
+
+  .faq-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+
+  .faq-list {
+    display: flex;
+
+    border-bottom: 1px solid rgba(250, 250, 250, 0.2);
+  }
+
+  .faq-item {
+    padding-bottom: 26px;
+  }
+
+  .faq-item:nth-child(3) {
+    border-bottom: none;
+  }
+
+  .left-column {
+    padding-right: 32px;
+    min-width: 688px;
+  }
+
+  .right-column {
+    padding-left: 32px;
+    min-width: 688px;
+  }
+
+  .faq-column {
+    border-right: 1px solid rgba(250, 250, 250, 0.2);
+  }
+
+  .faq-item-wrap {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+}

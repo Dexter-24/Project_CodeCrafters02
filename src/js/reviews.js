@@ -1,5 +1,5 @@
 import Swiper from 'swiper';
-import { Navigation } from 'swiper/modules';
+import { Navigation, Keyboard, Mousewheel } from 'swiper/modules';
 import 'swiper/css';
 
 // Инициализация Swiper для секции Reviews
@@ -15,14 +15,22 @@ document.addEventListener('DOMContentLoaded', function () {
   );
 
   const reviewsSwiper = new Swiper(reviewsSwiperContainer, {
-    modules: [Navigation],
+    modules: [Keyboard, Mousewheel, Navigation],
     slidesPerView: 4,
     spaceBetween: 16,
     navigation: {
       nextEl: reviewsSwiperNext,
       prevEl: reviewsSwiperPrev,
     },
-    keyboard: true,
+    keyboard: {
+      enabled: true,
+      onlyInViewport: true,
+      pageUpDown: true,
+    },
+    mousewheel: {
+      invert: true,
+    },
+    slideToClickedSlide: true,
     breakpoints: {
       320: {
         slidesPerView: 1,

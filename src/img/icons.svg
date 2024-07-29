@@ -34,5 +34,8 @@
     <symbol id="icon-modal-x" viewBox="0 0 32 32">
       <path stroke-linejoin="round" stroke-linecap="round" stroke-width="2.667" d="M24 8 8 24M8 8l16 16" />
     </symbol>
+    <symbol id="icon-modal-x" viewBox="0 0 32 32">
+      <path stroke-linejoin="round" stroke-linecap="round" stroke-width="2.667" d="M24 8 8 24M8 8l16 16"/>
+    </symbol>
   </defs>
 </svg>
