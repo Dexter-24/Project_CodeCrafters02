@@ -239,13 +239,13 @@
   text-align: center;
   font-weight: 600;
   font-size: 20px;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.01em;
 }
 
 .modal-message {
   text-align: center;
   font-weight: 500;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.01em;
   color: rgba(250, 250, 250, 0.6);
 }
 
@@ -351,7 +351,7 @@
   }
 
   .container.footer-container {
-    min-width: 1440px;
+    max-width: 1440px;
     padding: 0 196px;
   }
 

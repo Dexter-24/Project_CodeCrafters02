@@ -1,0 +1,147 @@
+.covers {
+    margin-bottom: 64px;
+    margin-top: 64px;
+    padding: 0;
+}
+
+
+.content-list {
+    display: flex;
+    transition: opacity 0.5s ease-in-out;
+    animation-name: Srolling;
+    animation-duration: 20s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-play-state: paused;
+}
+
+@keyframes Srolling {
+    from {
+        transform: translateX(100%);
+
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+.covers-container {
+    height: 508px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    padding: 0;
+    background: url(../img/covers-bg-mobile.png);
+}
+
+@media screen and (min-width: 768px) {
+    .covers-container {
+    margin-top: 96px;
+    margin-bottom: 96px; 
+    height: 960px;
+    background: url(../img/covers-bg-tablet.png);
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .covers-container {
+    margin-top: 164px;
+    margin-bottom: 164px;
+    background: url(../img/covers-bg-desktop.png);
+    }
+}
+
+.content {
+    position: absolute;
+    transform: rotate(16deg);
+    z-index: 1;
+    margin-bottom: 100px;
+    backdrop-filter: blur(30px);
+    background: rgba(217, 217, 217, 0.04);
+}
+
+@media screen and (min-width: 768px) {
+    .content {
+        margin-bottom: 0px;
+    }
+}
+
+.js-list-one {
+    margin-bottom: 50px;
+    position: relative;
+    left: 75%;
+}
+
+.js-list-two {
+    margin-bottom: 25px;
+    gap: 30px;
+    position: relative;
+    left: 17%;
+}
+
+@media screen and (min-width: 768px) {
+    .js-list-two {
+        gap: 60px;
+        margin-bottom: 50px;
+    }
+}
+
+
+  to {
+    transform: translateX(-180%);
+  }
+}
+
+.js-list-three {
+    margin-bottom: 25px;
+    gap: 25px;
+    position: relative;
+    left: 3%;
+}
+
+@media screen and (min-width: 768px) {
+    .js-list-three {
+        gap: 45px;
+        margin-bottom: 40px;
+    }
+}
+
+.js-list-four {
+    margin-bottom: 25px;
+    gap: 30px;
+    position: relative;
+    left: 17%;
+}
+
+@media screen and (min-width: 768px) {
+    .js-list-four {
+        gap: 65px;
+        margin-bottom: 60px;
+    }
+}
+
+.js-list-five {
+    position: relative;
+    left: 23%;
+}
+
+.content-list-item {
+}
+
+.content-list-image {
+    width: 282px;
+    height: 162px;
+    max-width: none;
+    
+}
+
+@media screen and (min-width: 768px) {
+    .content-list-image {
+        width: 544px;
+        height: 314px;
+        max-width: none;
+    }
+}

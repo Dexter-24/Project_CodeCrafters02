@@ -1,29 +1,30 @@
-.reviews {
+.reviews-section {
   background: #1c1d20;
-  padding: 32px 20px;
+  padding: 32px;
   position: relative;
-  width: 100%;
-  margin: 0 auto;
   box-sizing: border-box;
 }
 
 .reviews-title {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  color: rgba(250, 250, 250, 0.4);
   margin-bottom: 32px;
-  color: #fafafa;
-  font-weight: 700;
-  font-size: 28px;
-  line-height: 1.2;
 }
 
 .reviews-swiper-container {
   width: 100%;
   height: auto;
   position: relative;
+  overflow: hidden;
 }
 
-.swiper-wrapper {
+.reviews-swiper-wrapper {
   display: flex;
-  flex-wrap: nowrap; /* Убирает перенос элементов */
+  flex-wrap: nowrap;
   padding: 0;
   margin: 0;
   box-sizing: border-box;
@@ -33,8 +34,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0 8px; /* Отступ между карточками */
+  padding: 0 8px;
   box-sizing: border-box;
+  flex-shrink: 0;
 }
 
 .review-card {
@@ -42,8 +44,8 @@
   border: 1px solid rgba(250, 250, 250, 0.2);
   border-radius: 20px;
   padding: 16px;
-  width: 332px; /* Фиксированная ширина */
-  height: 302px; /* Фиксированная высота */
+  width: 332px;
+  height: 302px;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
@@ -79,10 +81,15 @@
   color: rgba(250, 250, 250, 0.6);
   margin: 0;
   flex-grow: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
 }
 
-.swiper-button-prev,
-.swiper-button-next {
+.reviews-swiper-button-prev,
+.reviews-swiper-button-next {
   position: absolute;
   width: 68px;
   height: 68px;
@@ -95,17 +102,15 @@
   align-items: center;
   justify-content: center;
   z-index: 10;
-  bottom: 0; /* Находимся непосредственно под swiper-container */
+  bottom: 0;
 }
 
-.swiper-button-prev {
-  left: calc(
-    50% - 84px
-  ); /* Центрирование с учетом ширины кнопки и расстояния между кнопками */
+.reviews-swiper-button-prev {
+  left: calc(50% - 72px);
 }
 
-.swiper-button-next {
-  left: calc(50% + 16px); /* Центрирование с учетом расстояния между кнопками */
+.reviews-swiper-button-next {
+  left: calc(50% + 16px);
 }
 
 .swiper-button-disabled {
@@ -113,67 +118,53 @@
   cursor: not-allowed;
 }
 
-.swiper-button-prev::before,
-.swiper-button-next::before {
-  font-size: 24px;
-  color: #fafafa;
-}
-
-.swiper-button-prev::before {
-  content: '◀'; /* Символ стрелки для кнопки "предыдущий" */
-  /* background-image: url('/src/img/icons.svg'); */
-}
-
-.swiper-button-next::before {
-  content: '▶';
-}
-
-/* Позиционирование кнопок с отступом 32px от нижнего края */
 .reviews-swiper-container {
-  padding-bottom: 100px; /* Обеспечивает место для кнопок */
+  padding-bottom: 100px;
   position: relative;
 }
 
 .reviews-swiper-container::after {
   display: block;
-  height: 100px; /* Высота, чтобы отступ от нижнего края контейнера был виден */
+  height: 100px;
   position: relative;
 }
 
-/* Медиа-запросы для адаптивности */
+/* Media queries for responsiveness */
 
-/* Мобильные устройства (320px и более) */
+/* Mobile devices (320px and up) */
 @media (min-width: 320px) {
   .swiper-slide {
-    padding: 0 8px; /* Отступ между карточками */
+    padding: 0 8px;
   }
 
   .review-card {
-    width: 100%; /* Полная ширина карточки на мобильных устройствах */
-    max-width: none; /* Убираем максимальную ширину */
+    width: 100%;
+    max-width: 100%;
+    height: auto;
   }
 }
 
-/* Таблеты (768px и более) */
+/* Tablets (768px and up) */
 @media (min-width: 768px) {
   .swiper-slide {
-    padding: 0 12px; /* Увеличенный отступ между карточками */
+    padding: 0 12px;
   }
 
   .review-card {
-    width: 100%; /* Полная ширина карточки на планшетах */
-    max-width: 332px; /* Максимальная ширина карточки */
+    width: 100%;
+    max-width: 332px;
+    height: auto;
   }
 }
 
-/* Десктопы (1440px и более) */
+/* Desktops (1440px and up) */
 @media (min-width: 1440px) {
   .swiper-slide {
-    padding: 0 16px; /* Расстояние между карточками */
+    padding: 0 16px;
   }
 
   .review-card {
-    width: 332px; /* Фиксированная ширина карточки */
-    height: 302px; /* Фиксированная высота карточки */
+    width: 332px;
+    height: 302px;
   }
 }
