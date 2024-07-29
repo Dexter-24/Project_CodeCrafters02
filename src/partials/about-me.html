@@ -14,25 +14,26 @@
       <picture>
         <source
           srcset="
-            ./img/aboutme-desktop-2x-min.png 2x,
-            ./img/aboutme-desktop-min.png    1x
+            /img/aboutme-desktop2x-min.jpg 2x,
+            /img/aboutme-desktop-min.jpg   1x
           "
           media="(min-width: 1440px)"
         />
         <source
-          srcset="./img/aboutme-tab@2x-min.png 2x, ./img/aboutme-tab-min.png 1x"
+          srcset="/img/aboutme-tab2x-min.jpg 2x, /img/aboutme-tab-min.jpg 1x"
           media="(min-width: 768px)"
         />
         <source
-          srcset="./img/aboutme-mob@2x-min.png 2x, ./img/aboutme-mob-min.png 1x"
-          media="(min-width: 375px)"
+          srcset="/img/aboutme-mob2x-min.jpg 2x, /img/aboutme-mob-min.jpg 1x"
+          media="(max-width: 767px)"
         />
         <img
           class="aboutme-img"
-          src="./img/aboutme-mob-min.png"
+          src="./img/aboutme-tab-min.jpg"
           alt="photo of FullStack developer"
-          width="343"
-          height="500"
+          width="704"
+          height="700"
+          loading="lazy"
         />
       </picture>
     </div>

@@ -1,92 +1,89 @@
 .covers {
-    margin-top: 64px;
-    margin-bottom: 64px;
-    height: 508px;
-    padding: 0;
-    background-color:  rgba(217, 217, 217, 0.04);
+  margin-top: 64px;
+  margin-bottom: 64px;
+  height: 508px;
+  padding: 0;
+  background-color: rgba(217, 217, 217, 0.04);
 }
 
 .covers-container {
 }
 
 .content {
-    padding: 0;
-
+  padding: 0;
 }
 
 .marquee {
-    width: 100%;
-    height: 508px;
-    overflow: hidden;
-    top: 0;
-    left: 0;
-    white-space: nowrap;
+  width: 100%;
+  height: 508px;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  white-space: nowrap;
 }
 
 .content-list {
-    display: flex;
-    flex-wrap: nowrap;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    width: 292px;
-height: 182px;
-    transform: rotate(16deg);
-  
+  display: flex;
+  flex-wrap: nowrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 292px;
+  height: 182px;
+  transform: rotate(16deg);
 }
 
 .content-list-item {
-    width: 282px;
-    height: 162px;
-    margin-right: 15px; 
-    margin-bottom: 25px; 
-    display: inline-block;
-    flex-shrink: 0;
-    white-space: nowrap;
-    animation-name: marqueeLine;
-    animation-duration: 5s;
-    animation-timing-function: ease-in-out;
-    animation-iteration-count: infinite;
+  width: 282px;
+  height: 162px;
+  margin-right: 15px;
+  margin-bottom: 25px;
+  display: inline-block;
+  flex-shrink: 0;
+  white-space: nowrap;
+  animation-name: marqueeLine;
+  animation-duration: 5s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
 }
 
 .content-list-image {
-    display: block;
-    object-fit: contain;
-    width: 100%;
-    height: 100%;
-    max-width: none;
-    max-height: none;
-    transform: translateY(-250px);
+  display: block;
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  max-height: none;
+  transform: translateY(-250px);
 }
 
 @keyframes marqueeLine {
-    from {
-      transform: translateX(-16%);
-    }
-    
-    to {
-      transform: translateX(-180%);
-    }
-  }   
+  from {
+    transform: translateX(-16%);
+  }
 
+  to {
+    transform: translateX(-180%);
+  }
+}
 
-  @media screen and (min-width: 375px) {
-    .container {
-        width: 375px;
-        padding: 0;
-    }
+@media screen and (min-width: 375px) {
+  .container {
+    width: 375px;
+    padding: 0;
+  }
 }
 
 @media screen and (min-width: 768px) {
-    .container {
-        width: 768px;
-        padding: 0;
-    }
+  .container {
+    width: 768px;
+    padding: 0;
+  }
 }
 
 @media screen and (min-width: 1440px) {
-    .container {
-        width: 1440px;
-        padding: 0;
-    }
+  .container {
+    width: 1440px;
+    padding: 0;
+  }
 }
