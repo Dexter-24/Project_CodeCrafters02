@@ -78,3 +78,22 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+document.addEventListener('DOMContentLoaded', () => {
+    const section = document.querySelector('#covers');
+    const lists = document.querySelectorAll('.content-list');
+
+    function isInViewport(el) {
+        const { top, bottom, left, right } = el.getBoundingClientRect();
+        const { innerHeight, innerWidth } = window;
+        return ( top < innerHeight && bottom > 0 && left < innerWidth && right > 0 );
+    }
+
+    function updateAnimation() {
+        const playState = isInViewport(section) ? 'running' : 'paused';
+        lists.forEach(list => list.style.animationPlayState = playState);
+    }
+
+    updateAnimation();
+    window.addEventListener('scroll', updateAnimation);
+});
+
