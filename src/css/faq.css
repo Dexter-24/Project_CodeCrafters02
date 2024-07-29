@@ -1,5 +1,5 @@
 .faq {
-  padding-bottom: 64px;
+  padding-top: 64px;
 }
 
 .faq-title {
@@ -71,7 +71,7 @@
 
 @media screen and (min-width: 768px) {
   .faq {
-    padding-bottom: 96px;
+    padding-top: 96px;
   }
 
   .faq-acordeon-wrap {
@@ -97,7 +97,7 @@
 
 @media screen and (min-width: 1280px) {
   .faq {
-    padding-bottom: 164px;
+    padding-top: 164px;
   }
 
   .faq-container {
