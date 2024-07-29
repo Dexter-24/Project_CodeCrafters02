@@ -243,9 +243,10 @@ p {
     }
 
     .header.active {
-        top: 32px;
-        left: 32px;
-        right: 32px;
+        top: 0 ;
+        left: 0;
+        right: 0;
+        border-radius: 0;
     }
 
     .hamburger {
@@ -320,6 +321,8 @@ p {
 
 .order-project-btn.active{
     margin-bottom: initial;
+    margin-right: 15px;
+    
 
 }
 
