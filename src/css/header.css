@@ -10,6 +10,11 @@
     line-height: 1.6;
 } */
 
+.header-container{
+    position: relative
+    ;
+}
+
 .body-no-scroll {
     overflow: hidden;
 }
@@ -61,7 +66,7 @@ p {
     transition: opacity .25s cubic-bezier(.4, 0, .2, 1),
         visibility .25s cubic-bezier(.4, 0, .2, 1),
         background-color .25s cubic-bezier(.4, 0, .2, 1),
-        transform .25s cubic-bezier(.4, 0, .2, 1),
+        /* transform .25s cubic-bezier(.4, 0, .2, 1), */
         border .25s cubic-bezier(.4, 0, .2, 1);
 
 }
@@ -92,7 +97,7 @@ p {
     position: fixed;
     top: 0;
     left: 0;
-    background: linear-gradient(-90deg, #1c1d20 49.68%, #69292d 67.73%, #ed3b44 100%);
+    background-image: url(../img/heromob@1x.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -111,6 +116,15 @@ p {
     transition: opacity .25s cubic-bezier(.4, 0, .2, 1), visibility .25s cubic-bezier(.4, 0, .2, 1);
 }
 
+
+@media screen and (min-device-pixel-ratio: 2),
+(min-resolution: 192dpi),
+(min-resolution: 2dppx) {
+    .nav-wraper {
+        background-image: url(../img/heromob@2x.png);
+    }
+}
+
 .nav-wraper.active {
     z-index: 0;
     opacity: 1;
@@ -125,6 +139,11 @@ p {
     gap: 8px;
     background: transparent;
     transition: transform 0.25s cubic-bezier(.4, 0, .2, 1);
+}
+.logoimage
+{
+    max-width: 80px;
+    /* height: 80px; */
 }
 
 .logo.active {
@@ -144,9 +163,6 @@ p {
     display: none;
 }
 
-.navigation {}
-
-.menu-title {}
 
 .order-project-btn {
     display: block;
@@ -243,10 +259,14 @@ p {
     }
 
     .header.active {
-        top: 0 ;
-        left: 0;
-        right: 0;
-        border-radius: 0;
+        width: 768px;
+            top: 0;
+            left: 50%;
+            right: 0;
+            border-radius: 0;
+            transform: translate(-50%);
+            transition: background-color 0.9s ease-in-out;
+            padding: 0px 16px
     }
 
     .hamburger {
@@ -381,4 +401,10 @@ p {
     }
 
 
+}
+
+@media screen and (min-width: 1440px){
+    .header.active{
+        width: 1440px;
+    }
 }
