@@ -14,22 +14,28 @@
       <picture>
         <source
           srcset="
-            /img/aboutme-desktop2x-min.jpg 2x,
-            /img/aboutme-desktop-min.jpg   1x
+            /img/about-me/aboutme-desktop2x-min.jpg 2x,
+            /img/about-me/aboutme-desktop-min.jpg   1x
           "
           media="(min-width: 1440px)"
         />
         <source
-          srcset="/img/aboutme-tab2x-min.jpg 2x, /img/aboutme-tab-min.jpg 1x"
+          srcset="
+            /img/about-me/aboutme-tab2x-min.jpg 2x,
+            /img/about-me/aboutme-tab-min.jpg   1x
+          "
           media="(min-width: 768px)"
         />
         <source
-          srcset="/img/aboutme-mob2x-min.jpg 2x, /img/aboutme-mob-min.jpg 1x"
+          srcset="
+            /img/about-me/aboutme-mob2x-min.jpg 2x,
+            /img/about-me/aboutme-mob-min.jpg   1x
+          "
           media="(max-width: 767px)"
         />
         <img
           class="aboutme-img"
-          src="./img/aboutme-tab-min.jpg"
+          src="./img/about-me/aboutme-tab-min.jpg"
           alt="photo of FullStack developer"
           width="704"
           height="700"
@@ -41,11 +47,13 @@
       <ul class="accordeon-list accordion-container">
         <li class="ac">
           <div class="accordeon-title ac-header">
-            <h3 class="title-text">About me</h3>
             <button type="button" class="title-current ac-trigger">
-              <svg class="title-icon is-active" width="18" height="18">
-                <use href="./img/icons.svg#icon-arrow-up"></use>
-              </svg>
+              <h3 class="title-text">About me</h3>
+              <div class="about-me-arrow-wraper">
+                <svg class="title-icon is-active" width="18" height="18">
+                  <use href="./img/icons.svg#icon-arrow-up"></use>
+                </svg>
+              </div>
             </button>
           </div>
           <div class="accordeon-content ac-panel">
@@ -74,11 +82,13 @@
         </li>
         <li class="ac">
           <div class="accordeon-title ac-header">
-            <h3 class="title-text accent-color-gray">Role</h3>
             <button type="button" class="title-current ac-trigger">
-              <svg class="title-icon" width="18" height="18">
-                <use href="./img/icons.svg#icon-arrow-down"></use>
-              </svg>
+              <h3 class="title-text accent-color-gray">Role</h3>
+              <div class="about-me-arrow-wraper">
+                <svg class="title-icon" width="18" height="18">
+                  <use href="./img/icons.svg#icon-arrow-down"></use>
+                </svg>
+              </div>
             </button>
           </div>
           <div class="accordeon-content ac-panel hidden">
@@ -91,11 +101,13 @@
         </li>
         <li class="ac">
           <div class="accordeon-title ac-header">
-            <h3 class="title-text accent-color-gray">Education</h3>
             <button type="button" class="title-current ac-trigger">
-              <svg class="title-icon" width="18" height="18">
-                <use href="./img/icons.svg#icon-arrow-down"></use>
-              </svg>
+              <h3 class="title-text accent-color-gray">Education</h3>
+              <div class="about-me-arrow-wraper">
+                <svg class="title-icon" width="18" height="18">
+                  <use href="./img/icons.svg#icon-arrow-down"></use>
+                </svg>
+              </div>
             </button>
           </div>
           <div class="accordeon-content ac-panel hidden">
@@ -143,7 +155,7 @@
         </ul>
       </div>
       <button class="swiper-arrow swiper-next" type="button">
-        <svg class="swiper-arrow-svg">
+        <svg class="swiper-arrow-svg" width="28" height="28">
           <use href="./img/icons.svg#icon-arrow-narrow-right"></use>
         </svg>
       </button>

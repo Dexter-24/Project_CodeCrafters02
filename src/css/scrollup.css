@@ -1,44 +1,45 @@
 .btn-up {
-    position: fixed;
-    background-color: #fff;
-    right: 20px;
-    bottom: 30px;
-    border-radius: 25px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: opacity 0.15s ease-in-out, transform 0.3s ease-in-out;
-    color: #242527;
-    width: 40px;
-    height: 40px;
-    opacity: 0.1;
-    transform: translateY(0);
+  position: fixed;
+  background-color: #fff;
+  right: 20px;
+  bottom: 30px;
+  border-radius: 25px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.15s ease-in-out, transform 0.3s ease-in-out;
+  color: #242527;
+  width: 40px;
+  height: 40px;
+  opacity: 0.6;
+  transform: translateY(0);
+  z-index: 25;
 }
 
 @media screen and (min-width: 1439px) {
-    .btn-up {
-        bottom: 50%;
-    }
+  .btn-up {
+    bottom: 10%;
+  }
 }
 
 .btn-up_hide {
-    display: none;
+  display: none;
 }
 
 .btn-up_hiding {
-    opacity: 0;
-    transform: translateY(100px);
+  opacity: 0;
+  transform: translateY(100px);
 }
 
 .btn-up-icon {
-    width: 30px;
-    height: 30px;
-    fill: currentcolor;
+  width: 30px;
+  height: 30px;
+  fill: currentcolor;
 }
 
 @media (hover: hover) and (pointer: fine) {
-    .btn-up:hover {
-        background-color: #fff;
-    }
+  .btn-up:hover {
+    background-color: #fff;
+  }
 }

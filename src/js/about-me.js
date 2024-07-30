@@ -19,7 +19,7 @@ const accordionItems = document.querySelectorAll('.accordeon-title');
 accordionItems.forEach(item => {
   item.addEventListener('click', function () {
     const arrow = item.querySelector('.title-icon');
-    const description = item.nextElementSibling;
+    const description = item.nextElementSibling; 
     arrow.classList.toggle('active-is');
     description.classList.toggle('hidden');
   });
