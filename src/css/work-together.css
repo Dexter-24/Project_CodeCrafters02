@@ -5,7 +5,7 @@
   min-width: 320px;
   margin: 0 auto;
   padding: 32px 0;
-  background: #1c1d20 url('/img/glass-effect-mob-1x.png') right center no-repeat;
+  background: #1c1d20 url('../img/work-together/glass-effect-mob.png') right center no-repeat;
 }
 
 .container.footer-container {
@@ -254,7 +254,7 @@
 @media screen and (min-width: 768px) {
   .footer {
     padding: 80px 0 169px;
-    background: #1c1d20 url('/img/glass-effect-tab-1x.png') right center
+    background: #1c1d20 url('/img/work-together/glass-effect-tab.png') right center
       no-repeat;
   }
 
@@ -346,7 +346,7 @@
 
 @media screen and (min-width: 1440px) {
   .footer {
-    background: #1c1d20 url('/img/glass-effect-desktop-1x.png') right center
+    background: #1c1d20 url('/img/work-together/glass-effect-desktop.png') right center
       no-repeat;
   }
 
@@ -368,21 +368,21 @@
 
 @media screen and (max-width: 767px) and (min-resolution: 192dpi) {
   .footer {
-    background: #1c1d20 url('/img/glass-effect-mob-2x.png') right center
+    background: #1c1d20 url('/img/work-together/glass-effect-mob@2x.png') right center
       no-repeat;
   }
 }
 
 @media screen and (min-width: 768px) and (min-resolution: 192dpi) {
   .footer {
-    background: #1c1d20 url('/img/glass-effect-tab-2x.png') right center
+    background: #1c1d20 url('/img/work-together/glass-effect-tab@2x.png') right center
       no-repeat;
   }
 }
 
 @media screen and (min-width: 1440px) and (min-resolution: 192dpi) {
   .footer {
-    background: #1c1d20 url('/img/glass-effect-desktop-2x.png') right center
+    background: #1c1d20 url('/img/work-together/glass-effect-desktop@2x.png') right center
       no-repeat;
   }
 }
