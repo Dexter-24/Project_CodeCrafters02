@@ -1,25 +1,36 @@
 .covers {
-    margin-bottom: 64px;
-    margin-top: 64px;
-    padding: 0;
+    padding-top: 64px;
+    padding-bottom: 32px;
 }
+
+@media screen and (min-width: 768px) {
+    .covers {
+        padding-top: 92px;
+        padding-bottom: 60px;
+    }
+}
+@media screen and (min-width: 1440px) {
+    .covers {
+        padding-top: 164px;
+        padding-bottom: 132px;
+    }
+}
+
 .content-list {
     display: flex;
     transition: opacity 0.5s ease-in-out;
-    animation-name: Srolling;
-    animation-duration: 20s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
+    animation: scrolling 9s cubic-bezier(.43,.67,.6,.36) infinite;
     animation-play-state: paused;
+    animation-direction: alternate; 
+    opacity: 1;
 }
-@keyframes Srolling {
-    from {
-        transform: translateX(100%);
-    }
-    to {
-        transform: translateX(-100%);
-    }
+
+@keyframes scrolling {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-15%); }
 }
+
+
 .covers-container {
     height: 508px;
     position: relative;
@@ -28,21 +39,17 @@
     justify-content: center;
     overflow: hidden;
     padding: 0;
-    background: url(../img/covers-bg-mobile.png);
+    background: url(../img/covers/covers-bg-mobile.jpg);
 }
 @media screen and (min-width: 768px) {
     .covers-container {
-    margin-top: 96px;
-    margin-bottom: 96px;
     height: 960px;
-    background: url(../img/covers-bg-tablet.png);
+    background: url(../img/covers/covers-bg-tablet.jpg);
     }
 }
 @media screen and (min-width: 1440px) {
     .covers-container {
-    margin-top: 164px;
-    margin-bottom: 164px;
-    background: url(../img/covers-bg-desktop.png);
+    background: url(../img/covers/covers-bg-desktop.jpg);
     }
 }
 .content {
@@ -73,10 +80,10 @@
     .js-list-two {
         gap: 60px;
         margin-bottom: 50px;
-    }
-  to {
+}
+    to {
     transform: translateX(-180%);
-  }
+}
 }
 .js-list-three {
     margin-bottom: 25px;
@@ -106,8 +113,7 @@
     position: relative;
     left: 23%;
 }
-.content-list-item {
-}
+
 .content-list-image {
     width: 282px;
     height: 162px;
