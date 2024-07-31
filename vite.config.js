@@ -26,8 +26,12 @@ export default defineConfig(({ command }) => {
       },
       outDir: '../dist',
     },
-    plugins: [injectHTML(), FullReload(['./src/**/**.html']), webfontDownload([
-      'https://fonts.googleapis.com/css2?family=Inter+Tight:wght@100..900&display=swap'
-    ])],
+    plugins: [
+      injectHTML(),
+      FullReload(['./src/**/**.html']),
+      webfontDownload([
+        'https://fonts.googleapis.com/css2?family=Inter+Tight:wght@100..900&display=swap',
+      ]),
+    ],
   };
 });
