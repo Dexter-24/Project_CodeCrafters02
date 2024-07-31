@@ -99,11 +99,6 @@
   letter-spacing: -0.02em;
 }
 
-.accordeon-title {
-  /* padding-bottom: 32px;
-    cursor: pointer; */
-}
-
 .accordeon-content-role-list,
 .accordeon-content-education-list {
   display: flex;
