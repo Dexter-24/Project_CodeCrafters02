@@ -199,7 +199,7 @@ p {
         transform .25s cubic-bezier(.4, 0, .2, 1),
         border .25s cubic-bezier(.4, 0, .2, 1);
     text-decoration-skip-ink: none;
-    color: #FAFAFA;
+    color: #FAFAFA ;
 }
 
 .line {
