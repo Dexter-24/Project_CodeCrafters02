@@ -3,7 +3,7 @@
 }
 
 .hero-container {
-  background-image: url(../img/heromob@1x.png);
+  background-image: url(../img/hero/heromob@1x.jpg);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: left;
@@ -13,7 +13,7 @@
   (min-resolution: 192dpi),
   (min-resolution: 2dppx) {
   .hero-container {
-    background-image: url(../img/heromob@2x.png);
+    background-image: url(../img/hero/heromob@2x.jpg);
   }
 }
 
@@ -46,6 +46,7 @@
   letter-spacing: -0.02em;
   font-family: 'Inter Tight', sans-serif;
   transition: border-color 250ms linear, box-shadow 250ms linear;
+  cursor: pointer;
 }
 
 .hero-list-item:hover,
@@ -81,14 +82,14 @@
   }
 
   .hero-container {
-    background-image: url(../img/herotab@1x.png);
+    background-image: url(../img/hero/herotab@1x.jpg);
   }
 
   @media screen and (min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),
     (min-resolution: 2dppx) {
     .hero-container {
-      background-image: url(../img/herotab@2x.png);
+      background-image: url(../img/hero/herotab@2x.jpg);
     }
   }
 }
@@ -100,14 +101,14 @@
   }
 
   .hero-container {
-    background-image: url(../img/herodesc@1x.png);
+    background-image: url(../img/hero/herodesc@1x.jpg);
   }
 
   @media screen and (min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),
     (min-resolution: 2dppx) {
     .hero-container {
-      background-image: url(../img/herodesc@2x.png);
+      background-image: url(../img/hero/herodesc@2x.jpg);
     }
   }
 }
