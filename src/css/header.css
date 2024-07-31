@@ -97,7 +97,10 @@ p {
     position: fixed;
     top: 0;
     left: 0;
-    background-image: url(../img/heromob@1x.png);
+        background-image:
+                linear-gradient(-90deg, #1c1d20 49.68%, #69292d 67.73%, #ed3b44 100%),
+                url(/img/header/glass_efect_mod_backdrop.png);
+            background-blend-mode: overlay;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -117,13 +120,7 @@ p {
 }
 
 
-@media screen and (min-device-pixel-ratio: 2),
-(min-resolution: 192dpi),
-(min-resolution: 2dppx) {
-    .nav-wraper {
-        background-image: url(../img/heromob@2x.png);
-    }
-}
+
 
 .nav-wraper.active {
     z-index: 0;
