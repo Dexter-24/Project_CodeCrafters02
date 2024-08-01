@@ -52,12 +52,12 @@ hamburger.addEventListener('click', function () {
   // Добавляем или удаляем класс active для бургер-меню
   hamburger.classList.toggle('active');
   if (hamburger.classList.contains('active')) {
-    body.classList.toggle('body-no-scroll');
+    body.classList.add('body-no-scroll');
     navList.style.visibility = 'visible';
       navList.style.opacity = '1';
 
   } else {
-      body.classList.toggle('body-no-scroll');
+      body.classList.remove('body-no-scroll');
  
   }
   // Добавляем или удаляем класс active для навигационного меню
@@ -87,7 +87,7 @@ navLinks.forEach(element =>
     if (targetSection) {
         targetSection.scrollIntoView({ block: 'start', behavior: 'smooth' });
         console.log(targetId, targetSection);
-       
+      //  body.classList.remove('body-no-scroll');
       }
       navList.classList.add('active');
       if (!targetId === 'projects') { 
@@ -95,6 +95,7 @@ navLinks.forEach(element =>
         
       }
     //   navList.style.backgroundColor = '';
+    body.classList.remove('body-no-scroll');
     navBar.classList.remove('active');
     hamburger.classList.remove('active');
   })
