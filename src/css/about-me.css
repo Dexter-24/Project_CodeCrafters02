@@ -52,11 +52,18 @@
   line-height: 1.5;
   letter-spacing: -0.02em;
   text-transform: uppercase;
+  cursor: pointer;
 }
 
 .title-current:hover,
 .title-current:focus {
-  box-shadow: 0px 14px 5px 0px rgba(0, 0, 0, 0.75);
+  background-color: rgba(255, 59, 68, 0.7);
+  border-radius: 4px;
+}
+
+.title-current:hover h3,
+.title-current:focus h3 {
+  color: #fafafa;
 }
 
 .about-me-arrow-wraper {
