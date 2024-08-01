@@ -53,12 +53,15 @@
   letter-spacing: -0.02em;
   text-transform: uppercase;
   cursor: pointer;
+  transition: 400ms;
 }
 
 .title-current:hover,
 .title-current:focus {
   background-color: rgba(255, 59, 68, 0.7);
   border-radius: 4px;
+  padding-left: 40px;
+  padding-right: 40px;
 }
 
 .title-current:hover h3,
