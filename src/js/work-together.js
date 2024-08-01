@@ -129,3 +129,4 @@ contactForm.addEventListener('input', event => {
   formData[event.target.name] = event.target.value.trim();
   saveToLocalStorage(storageKey, formData);
 });
+
