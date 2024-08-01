@@ -1,9 +1,4 @@
-/* ----- Benefits ----- */
-.benefits-container {
-    padding-left: 16px;
-    padding-right: 16px;
-}
-  
+/* ----- Benefits ----- */ 
 .benefits {
     padding-top: 64px;
     padding-bottom: 64px;
@@ -69,7 +64,6 @@
 }
   
 .benefits-btn {
-    cursor: pointer;
     display: block;
     border: 1px solid rgba(250, 250, 250, 0.2);
     border-radius: 60px;
