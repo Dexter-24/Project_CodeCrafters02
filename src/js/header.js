@@ -172,5 +172,12 @@ function handlerCloseTabletMenu(evt) {
   }
 }
 
-
-
+// событие для кликабкльности айтемов в меню
+document.querySelectorAll('.nav-items').forEach(item => {
+  item.addEventListener('click', event => {
+    const link = item.querySelector('.nav-link');
+    if (link) {
+      link.click();
+    }
+  });
+});
