@@ -72,11 +72,12 @@ p {
 }
 
 .header.active {
+    width: 375px;
     position: fixed;
     z-index: 9999;
     top: 0;
-    left: 16px;
-    right: 16px;
+    left: 50%;
+    /* right: 50%; */
     height: auto;
     border-radius: 20px;
     height: 80px;
@@ -88,7 +89,8 @@ p {
             rgba(45, 42, 42, 0.3) 100%
             /* Полупрозрачный красный */
         );
-    transition: background-color 0.9s ease-in-out, transform 0.9s ease-in-out;
+        transform: translate(-50%);
+    transition: background-color 0.9s ease-in-out;
 
 
 }
@@ -127,6 +129,7 @@ p {
     opacity: 1;
     visibility: visible;
     pointer-events: auto;
+    height: 100vh;
 }
 
 
@@ -373,6 +376,9 @@ p {
         display: flex;
         flex-direction: column;
 
+    }
+    .nav-wraper.active{
+        height: auto;
     }
 
     .nav-items:not(:last-child) {
