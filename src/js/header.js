@@ -133,9 +133,8 @@ const callback = (entries, observer) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
       navList.classList.add('active');
-      console.log(`Секция с ID ${entry.target.id} попала в область видимости!`);
     } else {
-      console.log(`Секция с ID ${entry.target.id} покинула область видимости.`);
+
       navList.classList.remove('active');
     }
   });
