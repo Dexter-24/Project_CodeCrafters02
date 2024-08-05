@@ -80,29 +80,29 @@ menuTablet.addEventListener('click', function (evt) {
 
 // Удаляем класс если клик был по ссылке
 
-// navLinks.forEach(element =>
-//   element.addEventListener('click', evt => {
-//     evt.preventDefault();
-//     const targetId = element.getAttribute('href').substring(1);
-//     const targetSection = document.getElementById(targetId);
+navLinks.forEach(element =>
+  element.addEventListener('click', evt => {
+    evt.preventDefault();
+    const targetId = element.getAttribute('href').substring(1);
+    const targetSection = document.getElementById(targetId);
     
-//     if (targetSection) {
-//         targetSection.scrollIntoView({ block: 'start', behavior: 'smooth' });
-//         console.log(targetId, targetSection);
-//       //  body.classList.remove('body-no-scroll');
-//       }
-//       navList.classList.add('active');
-//       if (!targetId === 'projects') {
-//           navList.classList.remove('active')
+    if (targetSection) {
+        targetSection.scrollIntoView({ block: 'start', behavior: 'smooth' });
+        console.log(targetId, targetSection);
+      //  body.classList.remove('body-no-scroll');
+      }
+      navList.classList.add('active');
+      if (!targetId === 'projects') {
+          navList.classList.remove('active')
         
-//       }
-//     //   navList.style.backgroundColor = '';
-//     body.classList.remove('body-no-scroll');
-//     navBar.classList.remove('active');
-//     hamburger.classList.remove('active');
-//     // navList.classList.remove('active');
-//   })
-// )
+      }
+    //   navList.style.backgroundColor = '';
+    body.classList.remove('body-no-scroll');
+    navBar.classList.remove('active');
+    hamburger.classList.remove('active');
+    // navList.classList.remove('active');
+  })
+)
 
 // const callback = (entries, observer) => {
 //   entries.forEach(entry => {

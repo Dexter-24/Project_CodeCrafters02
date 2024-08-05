@@ -332,7 +332,6 @@ p {
     margin-bottom: auto;
   }
 
-    }
     .nav-wraper.active{
         height: auto;
     }
@@ -392,8 +391,8 @@ p {
   .order-project-btn:hover {
     transform: scale(1.1);
   }
-}
 
+}
 @media screen and (min-width: 1440px) {
   .header.active {
     width: 1440px;
