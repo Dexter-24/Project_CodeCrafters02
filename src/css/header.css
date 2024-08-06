@@ -66,22 +66,27 @@ p {
 }
 
 .header.active {
-  position: fixed;
-  z-index: 9999;
-  top: 0;
-  left: 16px;
-  right: 16px;
-  height: auto;
-  border-radius: 20px;
-  height: 80px;
-  background: linear-gradient(
-    -90deg,
-    rgba(176, 177, 180, 0.3) 49.68%,
-    /* Полупрозрачный черный */ rgba(169, 143, 134, 0.3) 67.73%,
-    /* Полупрозрачный красно-коричневый */ rgba(45, 42, 42, 0.3) 100%
-      /* Полупрозрачный красный */
-  );
-  transition: background-color 0.9s ease-in-out, transform 0.9s ease-in-out;
+    width: 375px;
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: 50%;
+    /* right: 50%; */
+    height: auto;
+    border-radius: 20px;
+    height: 80px;
+    background: linear-gradient(-90deg,
+            rgba(176, 177, 180, 0.3) 49.68%,
+            /* Полупрозрачный черный */
+            rgba(169, 143, 134, 0.3) 67.73%,
+            /* Полупрозрачный красно-коричневый */
+            rgba(45, 42, 42, 0.3) 100%
+            /* Полупрозрачный красный */
+        );
+        transform: translate(-50%);
+    transition: background-color 0.9s ease-in-out;
+
+
 }
 
 .nav-wraper {
@@ -116,10 +121,13 @@ p {
 }
 
 .nav-wraper.active {
-  z-index: 0;
-  opacity: 1;
-  visibility: visible;
-  pointer-events: auto;
+
+    z-index: 0;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    height: 100vh;
+
 }
 
 .logo {
@@ -324,10 +332,15 @@ p {
     margin-bottom: auto;
   }
 
+    .nav-wraper.active{
+        height: auto;
+    }
+
   .order-project-btn.active {
     margin-bottom: initial;
     margin-right: 15px;
   }
+
 
   .nav-link {
     width: 100%;
@@ -378,8 +391,8 @@ p {
   .order-project-btn:hover {
     transform: scale(1.1);
   }
-}
 
+}
 @media screen and (min-width: 1440px) {
   .header.active {
     width: 1440px;
